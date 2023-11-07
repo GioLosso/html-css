@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        /*
+            Site https://www.dafont.com/pt
+
+        */
+
+        @font-face {
+            font-family: 'Namorado';
+            src: url('Filxgirl.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+
+         /*
+            Tipos de format()
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype
+            - truetype-aat (Apple Advanced Typography)
+            - svg
+            
+        */
+
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-family: 'Namorado', Times, serif;
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Título</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis exercitationem atque quidem consequuntur dolores iste accusamus aut veniam? Quidem sequi ipsum et veniam quis eaque omnis distinctio eum, repudiandae hic?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae repellendus nisi fugiat nihil consequatur consectetur consequuntur unde sit, non porro officiis dolorum magni eveniet optio quisquam autem doloremque labore? Officiis.</p>
+</body>
+</html>

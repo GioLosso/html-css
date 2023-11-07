@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/*
+    Representação de Identificador: HTML é id e CSS é #
+    Representação de classe: HTML é class e CSS é . 
+*/
+
+body {
+    background-color: #d6fde9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: rgb(19, 209, 19);
+}
+
+p{ 
+    text-align: justify;
+}
+
+#principal {
+    text-align: center;
+    color: white;
+    background-color: green;
+}
+h2 {
+    color: green;
+}
+.basico {
+    color: rgba(56, 184, 56, 0.76);
+}
+.intermediario{
+    color: rgba(47, 88, 47, 0.877);
+}
+.avancado{
+    color: rgba(2, 20, 2, 0.836);
+}
+.destaque{
+    background-color: rgba(126, 126, 66, 0.637);
+}
