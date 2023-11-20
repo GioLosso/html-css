@@ -11,16 +11,35 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         thead,tfoot {
             background-color: grey;
             color: white;
         }
+        thead > tr > th {
+            position: sticky;  /* Cabeçalho da tabela mantém fixa com a rolagem*/
+            top: -1px;
+            background-color: grey;
+        }
+
         td,th {
             border: 1px solid black;
             padding: 10px;
         }
+        tbody > tr:nth-child(2n){        /* tr:nth-child sigbifica que é uma subclasse filha. (2n) pula de 02 em dois. Usado para fazer linhas zebradas. Pode usar o conceito par(even ou 2n) e impar (odd ou 2n-1): -child(even) ou child(odd) */
+            background-color: lightgrey;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
         td.num {
+            text-align: right;
+        }
+        td#total {
             text-align: right;
         }
     </style>
@@ -30,6 +49,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (LEGENDA)
             THEAD
                 TR, TD, TH
             TBODY
@@ -38,10 +58,13 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th> <!-- Titulo da Tabela -->
-                <th>População</th>
+                <th scope="col">Estado</th> <!-- Titulo da Tabela -->
+                <th scope="col">População</th>
             </tr>
             </tr>
         </thead>
@@ -68,8 +91,8 @@
             </tr>
         </tbody>
         <tfoot>
-            <th>Total de habitantes</th>
-            <td><strong>110.649,804</strong></td>
+            <th scope="row">Total de habitantes</th>
+            <td id="total"><strong>110.649,804</strong></td>
         </tfoot>
     </table>
 </body>
